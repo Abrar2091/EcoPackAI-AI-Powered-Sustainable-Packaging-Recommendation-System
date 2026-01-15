@@ -1,0 +1,151 @@
+material_id,material_type,material_subtype,strength_MPa,weight_capacity_kg,density_g_per_cm3,cost_per_kg_usd,biodegradability_score,co2_emission_kgCO2_per_kg,recyclability_percentage
+1,PHA Bioplastic,Bio-degradable Polymer,35.59,28.98,2.077,4.4,15.4,2.561,95.5
+2,Rice Husk Composite,Agro-waste Composite,53.74,25.88,2.086,6.29,48.1,3.017,50.1
+3,Recycled Glass,Glass-based,36.91,10.24,0.458,4.4,53.3,0.429,26.7
+4,Seaweed Bioplastic,Marine-based Polymer,170.01,12.78,2.456,6.89,5.2,3.775,58.8
+5,Coconut Coir,Natural Fiber,99.16,25.83,1.463,4.64,33.7,1.129,88.6
+6,PHA Bioplastic,Bio-degradable Polymer,141.89,10.87,2.266,4.71,13.4,4.5,75.9
+7,Recycled Aluminum,Metal-based,229.66,6.75,1.0,7.07,6.3,1.105,82.6
+8,Molded Pulp,Paper-based,84.84,17.59,2.439,3.53,99.0,1.034,69.3
+9,PHA Bioplastic,Bio-degradable Polymer,120.28,28.21,1.173,1.51,32.2,0.279,72.3
+10,Recycled Glass,Glass-based,196.22,21.49,0.227,0.72,81.0,2.413,86.4
+11,Recycled Glass,Glass-based,80.34,17.96,2.463,6.16,25.5,2.868,32.5
+12,Seaweed Bioplastic,Marine-based Polymer,46.94,4.72,0.428,5.15,68.2,0.422,54.0
+13,Coconut Coir,Natural Fiber,93.75,19.22,0.998,5.78,76.0,3.9,29.9
+14,Rice Husk Composite,Agro-waste Composite,65.47,29.72,2.575,2.1,59.6,2.321,98.9
+15,Seaweed Bioplastic,Marine-based Polymer,234.53,5.92,2.577,1.52,47.2,2.67,95.0
+16,Seaweed Bioplastic,Marine-based Polymer,207.79,16.51,1.634,0.61,41.2,2.26,13.5
+17,Molded Pulp,Paper-based,169.35,26.57,1.78,3.13,34.9,2.064,73.5
+18,PLA Bioplastic,Bio-based Polymer,221.72,22.74,1.321,4.92,93.0,2.842,93.3
+19,Coconut Coir,Natural Fiber,206.81,21.52,0.933,3.44,83.1,0.861,26.3
+20,Bagasse,Agro-waste Fiber,71.05,21.67,1.022,3.78,96.5,0.991,61.1
+21,Seaweed Bioplastic,Marine-based Polymer,226.36,12.07,1.881,7.28,12.4,4.323,92.4
+22,Cornstarch Polymer,Bio-based Polymer,148.66,10.22,2.081,3.11,73.1,4.736,13.1
+23,PLA Bioplastic,Bio-based Polymer,207.64,24.66,2.179,4.35,93.8,1.929,72.8
+24,Bagasse,Agro-waste Fiber,227.14,24.68,2.174,6.38,18.1,1.427,36.8
+25,Cornstarch Polymer,Bio-based Polymer,99.96,26.28,0.428,3.47,6.6,3.256,93.2
+26,Coconut Coir,Natural Fiber,54.21,27.57,1.436,5.17,74.1,2.103,97.4
+27,Bamboo,Plant-based Fiber,80.15,16.32,0.344,6.97,57.4,0.224,95.0
+28,Cornstarch Polymer,Bio-based Polymer,123.96,16.04,1.574,7.62,84.2,0.865,52.7
+29,Recycled Aluminum,Metal-based,209.96,24.35,1.304,1.6,14.0,3.608,87.6
+30,PLA Bioplastic,Bio-based Polymer,219.36,20.2,2.419,7.45,79.5,3.329,86.0
+31,Cornstarch Polymer,Bio-based Polymer,31.53,21.66,1.077,4.19,20.2,0.233,38.7
+32,Recycled Paper,Paper-based,142.36,24.28,0.493,2.44,16.4,1.188,84.6
+33,Bamboo,Plant-based Fiber,121.83,26.92,0.557,3.94,16.4,1.232,13.3
+34,Recycled Glass,Glass-based,78.86,11.46,2.104,7.85,81.5,3.392,63.7
+35,Recycled Glass,Glass-based,56.37,12.52,1.746,4.19,66.5,0.197,30.7
+36,Recycled Aluminum,Metal-based,104.28,4.63,0.453,2.97,52.3,0.61,20.9
+37,Cornstarch Polymer,Bio-based Polymer,237.44,18.19,0.41,5.25,35.9,4.02,16.9
+38,Cornstarch Polymer,Bio-based Polymer,101.1,3.01,1.952,2.3,87.7,0.975,72.7
+39,Molded Pulp,Paper-based,144.13,15.04,0.382,1.07,39.2,3.298,40.6
+40,Cornstarch Polymer,Bio-based Polymer,184.66,17.19,2.255,1.47,81.7,1.267,75.2
+41,PHA Bioplastic,Bio-degradable Polymer,110.0,10.02,1.966,1.46,43.9,0.587,15.9
+42,Rice Husk Composite,Agro-waste Composite,243.79,18.54,0.403,1.64,37.7,1.292,38.4
+43,Recycled Paper,Paper-based,241.74,2.85,0.412,1.54,46.3,3.639,58.6
+44,Molded Pulp,Paper-based,85.39,3.05,2.667,5.31,30.1,4.293,81.2
+45,Coconut Coir,Natural Fiber,139.39,25.03,1.136,1.86,74.8,4.168,38.7
+46,Molded Pulp,Paper-based,96.19,12.09,1.127,3.09,50.3,2.046,66.3
+47,PHA Bioplastic,Bio-degradable Polymer,92.66,5.56,2.232,7.23,23.2,3.374,89.7
+48,Coconut Coir,Natural Fiber,38.12,16.62,2.568,4.05,90.0,1.104,65.4
+49,Recycled Paper,Paper-based,164.1,23.56,2.665,5.51,38.4,1.536,31.0
+50,PHA Bioplastic,Bio-degradable Polymer,140.59,8.04,2.083,1.79,54.4,4.492,12.2
+51,Bagasse,Agro-waste Fiber,41.33,19.44,1.141,1.94,90.6,0.164,88.3
+52,Rice Husk Composite,Agro-waste Composite,91.3,4.39,0.409,0.81,62.4,0.519,11.9
+53,Recycled Paper,Paper-based,229.82,3.45,2.143,1.77,11.7,1.119,88.7
+54,Cornstarch Polymer,Bio-based Polymer,82.7,16.88,1.596,2.59,94.0,0.23,57.6
+55,Bagasse,Agro-waste Fiber,61.88,17.14,1.261,1.83,62.8,0.989,94.5
+56,Recycled Aluminum,Metal-based,137.68,19.85,2.466,1.17,33.5,2.957,81.9
+57,Recycled Paper,Paper-based,246.84,22.33,0.478,1.4,13.9,2.165,99.8
+58,Recycled Aluminum,Metal-based,83.25,29.32,1.432,3.96,79.4,4.474,41.6
+59,Coconut Coir,Natural Fiber,177.87,16.46,0.228,2.05,62.0,4.105,79.0
+60,Bagasse,Agro-waste Fiber,197.56,11.04,1.372,3.23,53.3,1.775,46.2
+61,Rice Husk Composite,Agro-waste Composite,82.28,24.27,0.341,4.28,89.4,1.371,53.2
+62,Cornstarch Polymer,Bio-based Polymer,190.21,9.58,0.497,5.68,78.9,1.96,66.5
+63,Cornstarch Polymer,Bio-based Polymer,110.91,14.29,0.494,0.79,15.2,2.992,88.6
+64,PHA Bioplastic,Bio-degradable Polymer,169.11,4.2,1.823,6.5,31.2,1.414,98.6
+65,Cornstarch Polymer,Bio-based Polymer,169.38,2.71,2.065,5.21,24.8,3.158,79.1
+66,Seaweed Bioplastic,Marine-based Polymer,147.87,28.95,1.658,1.11,74.4,2.106,47.6
+67,Molded Pulp,Paper-based,49.86,25.41,2.605,7.05,3.4,2.805,47.9
+68,Bamboo,Plant-based Fiber,213.77,21.49,1.137,7.41,57.0,2.237,76.4
+69,Rice Husk Composite,Agro-waste Composite,100.57,13.45,0.914,0.96,76.2,1.543,31.5
+70,Bagasse,Agro-waste Fiber,71.03,6.85,2.371,2.58,87.7,4.747,19.9
+71,Seaweed Bioplastic,Marine-based Polymer,38.97,6.38,0.759,6.55,34.2,3.842,41.9
+72,Rice Husk Composite,Agro-waste Composite,160.0,9.01,2.608,6.11,82.1,0.787,35.9
+73,Bagasse,Agro-waste Fiber,179.06,17.38,0.23,1.88,11.1,4.355,36.7
+74,PLA Bioplastic,Bio-based Polymer,33.65,22.01,2.625,2.07,84.6,2.488,31.0
+75,PLA Bioplastic,Bio-based Polymer,142.66,20.49,0.308,3.28,12.7,4.483,13.8
+76,Recycled Aluminum,Metal-based,79.83,9.84,2.428,4.13,39.7,4.019,11.6
+77,Rice Husk Composite,Agro-waste Composite,171.94,28.74,1.519,5.14,79.7,2.184,98.9
+78,PLA Bioplastic,Bio-based Polymer,68.36,22.66,2.682,3.27,15.0,0.21,48.5
+79,Bagasse,Agro-waste Fiber,182.01,17.52,0.384,3.97,22.9,1.417,44.6
+80,Recycled Aluminum,Metal-based,115.08,19.13,1.585,6.11,72.2,2.754,71.2
+81,Cornstarch Polymer,Bio-based Polymer,236.08,13.75,2.623,0.78,72.0,3.204,29.6
+82,Bagasse,Agro-waste Fiber,60.25,8.94,1.508,2.39,64.1,1.364,95.5
+83,Recycled Aluminum,Metal-based,105.03,11.97,1.773,5.85,69.4,0.783,80.8
+84,Rice Husk Composite,Agro-waste Composite,54.96,23.22,1.939,7.21,54.3,4.191,18.0
+85,Seaweed Bioplastic,Marine-based Polymer,233.43,2.4,1.336,4.34,25.2,4.924,47.6
+86,PHA Bioplastic,Bio-degradable Polymer,223.01,5.25,1.769,4.49,34.6,2.676,89.1
+87,Cornstarch Polymer,Bio-based Polymer,86.75,3.29,1.661,1.3,18.2,0.941,95.0
+88,Recycled Paper,Paper-based,175.2,3.14,2.453,3.86,90.8,1.434,52.1
+89,Seaweed Bioplastic,Marine-based Polymer,209.79,25.95,0.314,4.49,58.3,0.19,65.2
+90,Coconut Coir,Natural Fiber,152.14,21.7,0.902,2.32,40.1,4.58,25.0
+91,Bagasse,Agro-waste Fiber,146.52,15.28,2.576,2.52,46.2,0.677,99.2
+92,Coconut Coir,Natural Fiber,83.21,4.74,2.426,3.33,94.7,2.925,30.9
+93,Seaweed Bioplastic,Marine-based Polymer,50.48,15.77,1.339,0.65,15.3,1.443,94.8
+94,Recycled Aluminum,Metal-based,227.39,15.26,1.75,2.92,58.6,2.815,68.5
+95,Recycled Paper,Paper-based,228.09,6.85,0.893,2.09,50.6,3.292,64.7
+96,Cornstarch Polymer,Bio-based Polymer,169.28,14.15,0.67,2.96,61.1,4.166,56.1
+97,Cornstarch Polymer,Bio-based Polymer,104.59,13.16,1.359,1.4,1.8,1.111,30.8
+98,Cornstarch Polymer,Bio-based Polymer,106.83,19.24,1.083,7.18,87.2,0.154,25.9
+99,Recycled Paper,Paper-based,189.71,19.78,1.659,4.95,93.2,0.771,29.8
+100,Bamboo,Plant-based Fiber,227.36,3.27,0.394,5.59,56.5,4.51,26.8
+101,Recycled Paper,Paper-based,225.16,12.49,2.636,6.42,69.7,4.382,80.2
+102,PHA Bioplastic,Bio-degradable Polymer,201.57,19.52,2.666,4.24,92.2,3.027,41.5
+103,Recycled Paper,Paper-based,171.25,16.09,1.945,1.15,70.7,3.043,15.2
+104,Seaweed Bioplastic,Marine-based Polymer,48.51,25.98,1.54,4.53,15.3,3.359,97.2
+105,Bamboo,Plant-based Fiber,65.56,20.44,0.974,4.9,57.6,0.959,89.5
+106,Cornstarch Polymer,Bio-based Polymer,227.68,6.56,2.234,6.09,60.7,4.581,93.5
+107,Seaweed Bioplastic,Marine-based Polymer,163.41,3.98,1.912,3.74,42.4,2.152,99.5
+108,Seaweed Bioplastic,Marine-based Polymer,32.02,19.99,0.607,1.46,73.6,1.977,25.7
+109,Recycled Glass,Glass-based,52.32,2.74,2.477,2.63,93.4,2.643,45.7
+110,Molded Pulp,Paper-based,175.97,18.4,2.256,3.22,92.6,0.33,78.2
+111,Bamboo,Plant-based Fiber,31.11,28.33,2.574,5.34,45.1,0.915,72.6
+112,Seaweed Bioplastic,Marine-based Polymer,65.38,18.11,2.014,4.78,11.3,3.716,23.9
+113,Molded Pulp,Paper-based,150.72,12.87,1.734,3.17,98.5,0.506,83.4
+114,Molded Pulp,Paper-based,182.22,20.01,1.246,7.9,83.9,3.055,30.2
+115,Bamboo,Plant-based Fiber,173.43,14.83,2.532,5.04,12.5,1.302,30.1
+116,Recycled Glass,Glass-based,79.34,17.28,2.365,2.28,92.1,2.008,58.3
+117,Coconut Coir,Natural Fiber,186.68,28.36,0.313,1.26,87.0,1.515,63.4
+118,Recycled Aluminum,Metal-based,82.19,12.81,0.266,1.65,51.9,1.843,62.2
+119,PHA Bioplastic,Bio-degradable Polymer,101.59,28.91,1.141,2.34,59.1,3.623,18.2
+120,Recycled Aluminum,Metal-based,194.23,27.35,2.226,1.71,39.9,1.556,89.0
+121,Recycled Paper,Paper-based,172.92,7.48,2.668,1.9,5.5,2.875,33.9
+122,Cornstarch Polymer,Bio-based Polymer,216.83,3.94,0.576,2.64,33.5,2.433,21.7
+123,PHA Bioplastic,Bio-degradable Polymer,174.67,4.82,1.685,1.8,80.3,3.352,90.0
+124,Recycled Paper,Paper-based,155.03,2.51,1.152,7.23,0.5,4.69,96.0
+125,Seaweed Bioplastic,Marine-based Polymer,50.61,4.64,2.625,1.1,33.3,3.69,87.6
+126,Cornstarch Polymer,Bio-based Polymer,110.9,21.12,2.305,4.43,39.8,1.153,82.9
+127,Bagasse,Agro-waste Fiber,88.34,3.99,2.296,3.58,53.7,0.253,69.0
+128,Bamboo,Plant-based Fiber,83.68,10.93,1.372,7.87,92.0,1.385,59.6
+129,PHA Bioplastic,Bio-degradable Polymer,244.06,25.66,1.237,1.34,34.6,3.016,17.8
+130,PHA Bioplastic,Bio-degradable Polymer,116.48,2.65,0.884,3.48,34.7,0.352,46.8
+131,Seaweed Bioplastic,Marine-based Polymer,226.25,24.81,0.341,7.77,73.8,2.532,43.5
+132,Coconut Coir,Natural Fiber,168.85,9.89,2.362,6.99,45.2,3.025,33.4
+133,Molded Pulp,Paper-based,204.86,5.31,2.232,6.63,22.5,1.738,75.1
+134,Cornstarch Polymer,Bio-based Polymer,140.58,21.51,2.699,2.43,45.2,3.877,54.6
+135,Seaweed Bioplastic,Marine-based Polymer,156.92,19.61,2.692,1.78,14.1,0.622,17.3
+136,PLA Bioplastic,Bio-based Polymer,138.35,26.57,1.589,5.51,17.6,0.468,29.8
+137,Recycled Glass,Glass-based,72.95,22.58,2.122,7.47,49.8,3.668,71.5
+138,Molded Pulp,Paper-based,188.94,24.5,2.562,4.68,41.9,2.528,16.9
+139,Bamboo,Plant-based Fiber,91.77,9.9,2.324,4.79,91.5,3.473,86.6
+140,Molded Pulp,Paper-based,35.35,6.97,0.818,2.6,36.2,2.231,54.6
+141,Coconut Coir,Natural Fiber,172.0,23.02,1.326,6.27,58.1,1.307,53.3
+142,Molded Pulp,Paper-based,68.96,24.59,0.523,1.9,63.2,4.114,63.3
+143,Bamboo,Plant-based Fiber,236.9,29.73,2.585,2.93,1.3,4.017,84.2
+144,Coconut Coir,Natural Fiber,239.86,13.55,1.715,3.69,66.4,3.504,41.3
+145,Recycled Aluminum,Metal-based,231.27,12.42,0.772,4.31,17.8,1.434,71.0
+146,PHA Bioplastic,Bio-degradable Polymer,111.43,23.74,1.879,2.32,96.1,2.992,60.9
+147,PHA Bioplastic,Bio-degradable Polymer,33.4,11.54,1.745,1.36,14.9,1.869,34.0
+148,Recycled Glass,Glass-based,234.23,28.06,1.095,5.08,41.5,0.549,89.1
+149,Recycled Paper,Paper-based,124.2,26.04,0.484,2.66,8.5,4.595,81.8
+150,Recycled Aluminum,Metal-based,242.66,14.01,1.879,4.86,99.7,0.77,69.3
