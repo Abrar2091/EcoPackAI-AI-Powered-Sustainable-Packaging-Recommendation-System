@@ -1,7 +1,11 @@
+matplotlib
 flask
 flask-cors
 sqlalchemy
 psycopg2-binary
 gunicorn
+joblib
 pandas
-matplotlib
+numpy
+scikit-learn
+
