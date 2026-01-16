@@ -1,3 +1,4 @@
-web: gunicorn gunicorn module5_api:app
+web: gunicorn module5_api:app
+
 
 
