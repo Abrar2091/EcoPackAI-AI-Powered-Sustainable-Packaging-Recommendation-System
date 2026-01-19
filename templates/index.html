@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoPackAI Frontend</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .top-buttons {
+  position: fixed;
+  top: 15px;
+  right: 20px;              /* Change to left:20px if needed */
+  display: flex;
+  gap: 12px;
+  z-index: 1000;
+}
+
+.custom-btn {
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+    body { background-color: #f8f9fa; }
+    .card { margin-bottom: 20px; }
+    pre.json-block { background: #212529; color: #e9ecef; padding: 12px; border-radius: 6px; overflow: auto; }
+    .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+    .metric-item { border: 1px solid #dee2e6; border-radius: 6px; padding: 10px; background: #fff; }
+    .metric-item .label { font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="container mt-4">
+    <h2 class="mb-4">EcoPackAI — Material Recommendation</h2>
+    <div class="top-buttons">
+
+  <a href="/dashboard" class="btn btn-primary" target="_blank">
+  📊 Open BI Dashboard
+  </a>
+
+</div>
+
+    <!-- Backend config -->
+    <div class="card">
+      <div class="card-header bg-dark text-white">Backend Configuration</div>
+      <div class="card-body">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Base URL</label>
+            <input type="text" id="baseUrl" class="form-control" value="http://127.0.0.1:5000" />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">X-API-Key</label>
+            <input type="text" id="apiKey" class="form-control" value="change-this-api-key" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product input -->
+    <div class="card">
+      <div class="card-header bg-primary text-white">Product Parameters</div>
+      <div class="card-body">
+        <form id="productForm">
+          <div class="row g-3">
+            <div class="col-md-4">
+              <label class="form-label">Product Name</label>
+              <input type="text" class="form-control" id="productName" placeholder="EcoPack Box S" required />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Max Cost per kg (USD)</label>
+              <input type="number" step="0.01" class="form-control" id="maxCost" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Max CO₂ per kg</label>
+              <input type="number" step="0.01" class="form-control" id="maxCO2" />
+            </div>
+          </div>
+          <div class="mt-3">
+            <button type="submit" class="btn btn-success">Create Product & Get Recommendations</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Materials input -->
+    <div class="card">
+      <div class="card-header bg-secondary text-white">Add Candidate Materials</div>
+      <div class="card-body">
+        <form id="materialsForm">
+          <div class="row g-3">
+            <div class="col-md-3">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" id="matName" placeholder="Coconut Coir" />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Material Type</label>
+              <input type="text" class="form-control" id="matType" placeholder="Natural Fiber" />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Material Subtype</label>
+              <input type="text" class="form-control" id="matSubtype" placeholder="Agro-waste Fiber" />
+            </div>
+          </div>
+          <div class="row g-3 mt-2">
+            <div class="col-md-2">
+              <label class="form-label">Strength (MPa)</label>
+              <input type="number" step="0.0001" class="form-control" id="strength" />
+            </div>
+            <div class="col-md-2">
+              <label class="form-label">Weight Capacity (kg)</label>
+              <input type="number" step="0.0001" class="form-control" id="weightCap" />
+            </div>
+            <div class="col-md-2">
+              <label class="form-label">Density (g/cm³)</label>
+              <input type="number" step="0.0001" class="form-control" id="density" />
+            </div>
+            <div class="col-md-2">
+              <label class="form-label">Biodegradability (0–10)</label>
+              <input type="number" step="0.01" class="form-control" id="bio" />
+            </div>
+            <div class="col-md-2">
+              <label class="form-label">Recyclability (%)</label>
+              <input type="number" step="0.01" class="form-control" id="recy" />
+            </div>
+            <div class="col-md-2">
+              <label class="form-label">Suitability (0–10)</label>
+              <input type="number" step="0.01" class="form-control" id="suit" />
+            </div>
+          </div>
+          <div class="mt-3">
+            <button type="submit" class="btn btn-outline-primary">Save Material</button>
+            <button type="button" class="btn btn-outline-secondary" id="listMaterialsBtn">List Materials</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Recommendations JSON -->
+    <div class="card">
+      <div class="card-header bg-info text-white">AI Material Recommendations (JSON)</div>
+      <div class="card-body">
+        <pre id="recommendationsJson" class="json-block">{}</pre>
+      </div>
+    </div>
+
+    <!-- Ranking table -->
+    <div class="card">
+      <div class="card-header bg-warning text-dark">Material Ranking</div>
+      <div class="card-body">
+        <table class="table table-bordered table-striped" id="rankingTable">
+          <thead class="table-light">
+            <tr>
+              <th>Name</th>
+              <th>Predicted Cost (USD/kg)</th>
+              <th>Predicted CO₂ (kgCO₂/kg)</th>
+              <th>Rank Score</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Metrics -->
+    <div class="card">
+      <div class="card-header bg-dark text-white">Metrics (Client-Side)</div>
+      <div class="card-body">
+        <div id="metricsGrid" class="metrics-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const productForm = document.getElementById("productForm");
+    const materialsForm = document.getElementById("materialsForm");
+    const listMaterialsBtn = document.getElementById("listMaterialsBtn");
+    const recommendationsJsonEl = document.getElementById("recommendationsJson");
+    const rankingTableBody = document.querySelector("#rankingTable tbody");
+    const metricsGrid = document.getElementById("metricsGrid");
+
+    function cfg() {
+      return {
+        baseUrl: document.getElementById("baseUrl").value.trim(),
+        apiKey: document.getElementById("apiKey").value.trim()
+      };
+    }
+
+    function setJson(el, obj) {
+      el.textContent = JSON.stringify(obj, null, 2);
+    }
+
+    function renderRankingTable(recommendations) {
+      rankingTableBody.innerHTML = "";
+      if (!Array.isArray(recommendations)) return;
+      for (const r of recommendations) {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${r.name}</td>
+          <td>${Number(r.predicted_cost_per_kg_usd).toFixed(3)}</td>
+          <td>${Number(r.predicted_co2_kgCO2_per_kg).toFixed(3)}</td>
+          <td>${Number(r.material_rank_score).toFixed(3)}</td>
+        `;
+        rankingTableBody.appendChild(tr);
+      }
+    }
+
+    function computeMetrics(recs) {
+      if (!Array.isArray(recs) || recs.length === 0) return {};
+      const costs = recs.map(r => Number(r.predicted_cost_per_kg_usd));
+      const co2s = recs.map(r => Number(r.predicted_co2_kgCO2_per_kg));
+      const mean = arr => arr.reduce((a,b)=>a+b,0)/arr.length;
+      const mse = (arr, m) => arr.reduce((a,b)=>a+(b-m)**2,0)/arr.length;
+      const mae = (arr, m) => arr.reduce((a,b)=>a+Math.abs(b-m),0)/arr.length;
+      const mc = mean(costs), mco2 = mean(co2s);
+      return {
+        "RMSE cost (vs mean)": Math.sqrt(mse(costs, mc)).toFixed(4),
+        "MAE cost (vs mean)": mae(costs, mc).toFixed(4),
+        "RMSE CO₂ (vs mean)": Math.sqrt(mse(co2s, mco2)).toFixed(4),
+        "MAE CO₂ (vs mean)": mae(co2s, mco2).toFixed(4),
+        "Count": recs.length
+      };
+    }
+
+    function renderMetrics(metrics) {
+      metricsGrid.innerHTML = "";
+      Object.entries(metrics).forEach(([k, v]) => {
+        const div = document.createElement("div");
+        div.className = "metric-item";
+        div.innerHTML = `<div class="label">${k}</div><div>${v}</div>`;
+        metricsGrid.appendChild(div);
+      });
+    }
+
+    productForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const { baseUrl, apiKey } = cfg();
+      const name = document.getElementById("productName").value;
+      const maxCost = document.getElementById("maxCost").value;
+      const maxCO2 = document.getElementById("maxCO2").value;
+      try {
+        const productRes = await fetch(`${baseUrl}/api/products`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "X-API-Key": apiKey },
+          body: JSON.stringify({
+            name,
+            max_cost_per_kg_usd: maxCost ? parseFloat(maxCost) : null,
+            max_co2_emission_kgCO2_per_kg: maxCO2 ? parseFloat(maxCO2) : null
+          })
+        });
+        const productData = await productRes.json();
+        if (productData.status !== "success") throw new Error(productData.error?.message || "Product create failed");
+        const productId = productData.data.id;
+
+        const recRes = await fetch(`${baseUrl}/api/recommendations/materials`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "X-API-Key": apiKey },
+          body: JSON.stringify({ product_id: productId })
+        });
+        const recData = await recRes.json();
+        if (recData.status !== "success") throw new Error(recData.error?.message || "Recommendation failed");
+
+        setJson(recommendationsJsonEl, recData.data.recommendations);
+        renderRankingTable(recData.data.recommendations);
+        renderMetrics(computeMetrics(recData.data.recommendations));
+      } catch (err) {
+        setJson(recommendationsJsonEl, { error: err.message });
+        rankingTableBody.innerHTML = "";
+        metricsGrid.innerHTML = "";
+      }
+    });
+
+    materialsForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const { baseUrl, apiKey } = cfg();
+      const payload = {
+        materials: [{
+          name: document.getElementById("matName").value || "Unnamed",
+          material_type: document.getElementById("matType").value || "Unknown",
+          material_subtype: document.getElementById("matSubtype").value || "Unknown",
+          strength_MPa: parseFloat(document.getElementById("strength").value),
+          weight_capacity_kg: parseFloat(document.getElementById("weightCap").value),
+          density_g_per_cm3: parseFloat(document.getElementById("density").value),
+          biodegradability_score: parseFloat(document.getElementById("bio").value),
+          recyclability_percentage: parseFloat(document.getElementById("recy").value),
+          material_suitability_score: parseFloat(document.getElementById("suit").value)
+        }]
+      };
+      try {
+        const res = await fetch(`${baseUrl}/api/materials`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "X-API-Key": apiKey },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        setJson(recommendationsJsonEl, data);
+      } catch (err) {
+        setJson(recommendationsJsonEl, { error: err.message });
+      }
+    });
+
+    listMaterialsBtn.addEventListener("click", async () => {
+      const { baseUrl, apiKey } = cfg();
+      try {
+        const res = await fetch(`${baseUrl}/api/materials`, {
+          headers: { "X-API-Key": apiKey }
+        });
+        const data = await res.json();
+        setJson(recommendationsJsonEl, data);
+      } catch (err) {
+        setJson(recommendationsJsonEl, { error: err.message });
+      }
+    });
+  </script>
+</body>
+</html>
