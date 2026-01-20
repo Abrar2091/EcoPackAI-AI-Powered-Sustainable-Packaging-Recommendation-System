@@ -24,7 +24,7 @@ Traditional packaging selection often prioritizes cost and convenience over sust
 - **Frontend:** HTML, CSS, Bootstrap
 - **Backend:** Python, Flask
 - **Database:** PostgreSQL (Cloud)
-- **Deployment:** Render / Heroku
+- **Deployment:** Render
 - **Tools:** GitHub, VS Code
 
 ---
@@ -48,7 +48,7 @@ The user submits packaging requirements through the web interface. The Flask bac
 ---
 
 ## 7. Database Design
-**Database Name:** ecopackai_db
+**Database Name:** Postgres
 
 **Tables:**
 - **materials**
@@ -76,15 +76,15 @@ The user submits packaging requirements through the web interface. The Flask bac
 ---
 
 ## 9. Deployment Details
-- **Platform:** Render / Heroku
+- **Platform:** Render
 - **Database:** PostgreSQL Cloud Instance
 
 **Environment Variables:**
 - `DATABASE_URL`
-- `SECRET_KEY`
+- api_key:`super`
 
 **Live URL:**  
-https://your-project.onrender.com
+https://your-project.onrender.com](https://ecopackai-ai-powered-sustainable.onrender.com/
 
 ---
 
@@ -93,7 +93,7 @@ https://your-project.onrender.com
 git clone https://github.com/Abrar2091/EcoPackAI-AI-Powered-Sustainable-Packaging-Recommendation-System
 cd EcoPackAI-AI-Powered-Sustainable-Packaging-Recommendation-System
 pip install -r requirements.txt
-python app.py
+python module5_api.py
 ```
 
 ---
